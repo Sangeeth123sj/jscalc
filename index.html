@@ -1,0 +1,51 @@
+<html>
+<center>
+<h1> <strong>Calculator</strong></h1>
+<script>
+document.write("enter 2 numbers")
+</script>
+<form id="form">
+<input type = "number" placeholder="no. 1" id="a"> <br/><br/>
+<input type = "number" placeholder="no. 2" id="b"> <br/><br/>
+</form>
+
+<button onclick="func_add()">+</button>
+<button onclick="func_minus()">-</button>
+<button onclick="func_div()">/</button>
+<button onclick="func_mult()">*</button>
+<p>Answer:</p>
+<p id = "op"></p>
+<p id = "res"></p>
+</center>
+<script>
+function func_add(){
+    var r = document.getElementById("form");
+    var a = parseInt(r.elements[0].value);
+    var b = parseInt(r.elements[1].value);
+    document.getElementById("op").innerHTML = "add";
+    document.getElementById("res").innerHTML = a + b;
+}
+function func_minus(){
+    var r = document.getElementById("form");
+    var a = parseInt(r.elements[0].value);
+    var b = parseInt(r.elements[1].value);
+    document.getElementById("op").innerHTML = "minus";
+    document.getElementById("res").innerHTML = a - b;
+}
+function func_div(){
+    var r = document.getElementById("form");
+    var a = parseInt(r.elements[0].value);
+    var b = parseInt(r.elements[1].value);
+    document.getElementById("op").innerHTML = "div";
+    document.getElementById("res").innerHTML = a / b;
+}
+function func_mult(){
+    var r = document.getElementById("form");
+    var a = parseInt(r.elements[0].value);
+    var b = parseInt(r.elements[1].value);
+    document.getElementById("op").innerHTML = "multiplied";
+    document.getElementById("res").innerHTML = a * b;
+}
+</script>
+
+</html>
